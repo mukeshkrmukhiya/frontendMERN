@@ -86,7 +86,7 @@ const About = () => {
                 <p> <Link className=' text-decoration-none  ' href="https://www.facebook.com/profile.php?id=100011525521232&mibextid=ZbWKwL" target="_blank">FaceBook</Link> </p>
                 <p> <Link className=' text-decoration-none  ' href="https://instagram.com/mukeshkr.mukhiya?igshid=ZDdkNTZiNTM=" target="_blank">Instragram</Link> </p>
                 <p> <Link className=' text-decoration-none  ' href="/" target="_blank">Web devloper</Link> </p>
-                <p> <Link className=' text-decoration-none  ' href="http://bvucoepune.edu.in/" target="_blank">Engeeneer</Link> </p>
+                <p> <Link className=' text-decoration-none  ' href="http://bvucoepune.edu.in/" target="_blank">Engineering</Link> </p>
 
               </div>
               <div class="col col-md-8 col-lg-8 flex-md-row flex-lg-row border-bottom ">
