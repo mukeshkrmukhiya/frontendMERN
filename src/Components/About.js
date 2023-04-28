@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router'
 import mypic from '../Images/halfPhoto.jpg'
 import aboutimg from '../Images/kartik.jpg'
 import { Link } from 'react-router-dom'
+import {bkndurl} from "../helper"
 const About = () => {
-  const bkndurl = 'http://localhost:8000'
+  // const bkndurl = 'http://localhost:8000'
+ 
   const [userData, setUserData] = useState({});
   const token =  localStorage.getItem('token');
 

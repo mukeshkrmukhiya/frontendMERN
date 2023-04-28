@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import {bkndurl} from "../helper"
+// const bkndurl = 'http://localhost:8000'
 
 import  '../ComponentCss/Signup.css'
 const Signup = (props) => {
-  const bkndurl = 'http://localhost:8000'
 
   const [user, setUser] = useState(
     {name : "", email:"",phone: "",  work:"", password:"", cpassword:""}

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-const bkndurl = 'http://localhost:8000'
+import {bkndurl} from "../helper"
+// const bkndurl = 'http://localhost:8000'
 
 
 

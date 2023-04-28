@@ -3,7 +3,8 @@ import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { UserContext } from '../App'
 import '../ComponentCss/Login.css'
-const bkndurl = 'http://localhost:8000'
+import {bkndurl} from "../helper"
+// const bkndurl = 'http://localhost:8000'
 
 const Login = (props) => {
   

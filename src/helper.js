@@ -1,1 +1,1 @@
-export const bkndurl = ""
+export  const bkndurl = "https://backendmern-ldr5.onrender.com"

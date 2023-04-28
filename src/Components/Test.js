@@ -1,15 +1,11 @@
-import React, {useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
+import {bkndurl} from "../helper"
 
 const Test = () => {
 
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [items, setItems] = useState([]);
-    const [userData , setUserData] = useState({name:"", email:"", subject:"", message:""});
-
 useEffect( () => {
     try {
-        fetch("http://localhost:8000/getdata",{
+        fetch(`${bkndurl}/getdata`,{
    
     method: 'GET',
     headers: {

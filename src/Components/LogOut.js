@@ -1,7 +1,8 @@
 import React, { useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router'
 import { UserContext } from '../App'
-const bkndurl = 'http://localhost:8000'
+import {bkndurl} from "../helper"
+// const bkndurl = 'http://localhost:8000'
 
 function LogOut(props) {
     const {state, dispatch} = useContext(UserContext)

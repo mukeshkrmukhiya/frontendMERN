@@ -1,11 +1,11 @@
 // import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router';
-
+import {bkndurl} from "../helper"
 
 const Contact = (props) => {
 
-const bkndurl = 'http://localhost:8000'
+// const bkndurl = 'http://localhost:8000'
 const [userData , setUserData] = useState({name:"", email:"", subject:"", message:""});
 const token =  localStorage.getItem('token');
 const Navigate = useNavigate();
