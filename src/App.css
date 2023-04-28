@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  background-color: rgba(153, 153, 133, 0.171);
+  
+}
+
+
+.navbar{
+  background-color: rgb(147, 192, 24);
+  background-image: linear-gradient(to left, yellow, green);
+}
