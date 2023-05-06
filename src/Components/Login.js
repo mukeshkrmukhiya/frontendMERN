@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router'
 import { UserContext } from '../App'
 import '../ComponentCss/Login.css'
 import {bkndurl} from "../helper"
+import { Link } from 'react-router-dom'
 // const bkndurl = 'http://localhost:8000'
 
 const Login = (props) => {
@@ -85,7 +86,7 @@ const Login = (props) => {
       Submit
     </button>
   </form>
-  <p>Don't have an account? <a href='/signup' className="a2"  >Sign up!</a></p>
+  <p className=' p-2'>Don't have an account?  <Link  to='/signup' className="a2"  >Sign up!</Link></p>
 </div>
 
 </div>

@@ -4,6 +4,7 @@ import mypic from '../Images/halfPhoto.jpg'
 import aboutimg from '../Images/kartik.jpg'
 import { Link } from 'react-router-dom'
 import {bkndurl} from "../helper"
+
 const About = () => {
   // const bkndurl = 'http://localhost:8000'
  
@@ -81,12 +82,12 @@ const About = () => {
 
               <div class="col col-md-4 col-lg-4  text-sm-center  ps-5  border-end text-success  bg-gradient  ">
                 <h3>My profile Links</h3>
-                <p> <Link className=' text-decoration-none  ' href="https://github.com/mukeshkrmukhiya" target="_blank">Github</Link> </p>
-                <p> <Link className=' text-decoration-none  ' href="https://www.linkedin.com/in/mukeshkrmukhiya/" target="_blank">LinkedIN</Link> </p>
-                <p> <Link className=' text-decoration-none  ' href="https://www.facebook.com/profile.php?id=100011525521232&mibextid=ZbWKwL" target="_blank">FaceBook</Link> </p>
-                <p> <Link className=' text-decoration-none  ' href="https://instagram.com/mukeshkr.mukhiya?igshid=ZDdkNTZiNTM=" target="_blank">Instragram</Link> </p>
-                <p> <Link className=' text-decoration-none  ' href="/" target="_blank">Web devloper</Link> </p>
-                <p> <Link className=' text-decoration-none  ' href="http://bvucoepune.edu.in/" target="_blank">Engineering</Link> </p>
+                <p> <Link className=' text-decoration-none  ' to="https://github.com/mukeshkrmukhiya" target="_blank">Github</Link> </p>
+                <p> <Link className=' text-decoration-none  ' to="https://www.linkedin.com/in/mukeshkrmukhiya/" target="_blank">LinkedIN</Link> </p>
+                <p> <Link className=' text-decoration-none  ' to="https://www.facebook.com/profile.php?id=100011525521232&mibextid=ZbWKwL" target="_blank">FaceBook</Link> </p>
+                <p> <Link className=' text-decoration-none  ' to="https://instagram.com/mukeshkr.mukhiya?igshid=ZDdkNTZiNTM=" target="_blank">Instragram</Link> </p>
+                <p> <Link className=' text-decoration-none  ' to="/" target="_blank">Web devloper</Link> </p>
+                <p> <Link className=' text-decoration-none  ' to="http://bvucoepune.edu.in/" target="_blank">Engineering</Link> </p>
 
               </div>
               <div class="col col-md-8 col-lg-8 flex-md-row flex-lg-row border-bottom ">
