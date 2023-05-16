@@ -5,6 +5,7 @@ import {bkndurl} from "../helper"
 
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
   const [userData , setUserData] = useState({});
 const [userShow , setUserShow] = useState(false);
 const token = localStorage.getItem('token');
@@ -33,6 +34,7 @@ const GetHomeData = async ()=>{
   setUserShow(true)
 
   if(localStorage.getItem('token')){
+    setLoading(false)
     console.log("success")
   }
 
@@ -48,9 +50,12 @@ const GetHomeData = async ()=>{
 
 useEffect(() => {
   GetHomeData()
+  setLoading(false)
 }, [ ]);
 
-
+if (loading) {
+  return <p className='text-center '>Loading...</p>; // Display a loading state while the data is being fetched
+}
   return (
     <>
     <div className=' container-lg container-xl container-md container  rounded-3 '>

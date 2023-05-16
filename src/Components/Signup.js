@@ -6,6 +6,7 @@ import {bkndurl} from "../helper"
 import  '../ComponentCss/Signup.css'
 const Signup = (props) => {
 
+  const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(
     {name : "", email:"",phone: "",  work:"", password:"", cpassword:""}
   ) 
@@ -21,7 +22,7 @@ const Signup = (props) => {
 
   const HandalOnClick = async (event )=> {
     console.log("handal on click")
-
+    setLoading(true)
     // using fetch api alternative is axiose
       event.preventDefault();
     const  {name , email,phone,  work, password, cpassword} = user;
@@ -66,6 +67,9 @@ const Signup = (props) => {
   }
 
 
+  if (loading) {
+    return <p className='text-center '>Loading...</p>; // Display a loading state while the data is being fetched
+  }
 
 
   return (

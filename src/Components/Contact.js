@@ -8,6 +8,7 @@ const Contact = (props) => {
 // const bkndurl = 'http://localhost:8000'
 const [userData , setUserData] = useState({name:"", email:"", subject:"", message:""});
 const token =  localStorage.getItem('token');
+const [loading, setLoading] = useState(true)
 const Navigate = useNavigate();
 //getting data 
 const ContactData = async ()=>{
@@ -26,7 +27,7 @@ const ContactData = async ()=>{
     // credentials: 'include'
     
   })
-
+  setLoading(false)
   const data = await res.json(res);
   console.log(data);
 
@@ -88,6 +89,10 @@ console.log("contact data: " + data)
         Navigate(`/`)
       }
 
+}
+
+if (loading) {
+  return <p className='text-center '>Loading...</p>; // Display a loading state while the data is being fetched
 }
 
   return (

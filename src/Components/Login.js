@@ -11,6 +11,7 @@ const Login = (props) => {
   
   
   const {state, dispatch} = useContext(UserContext)
+  const [loading, setLoading] = useState(false);
 
   const [user, setUser] = useState({
     email:'', password:''
@@ -26,6 +27,7 @@ const Login = (props) => {
 
   const HandalOnClick = async (event )=> {
     console.log("handal on click")
+    setLoading(true)
 
     // using fetch api alternative is axioce
       event.preventDefault();
@@ -41,6 +43,7 @@ const Login = (props) => {
 
   const response = await res.json()
 
+  setLoading(false)
   if(res.status === 200  ){
     localStorage.setItem('token',response.ClientToken);
     dispatch({type: "USER", payload: true})
@@ -62,7 +65,9 @@ const Login = (props) => {
     
   }
 
-
+  if (loading) {
+    return <p className='text-center '>Loading...</p>; // Display a loading state while the data is being fetched
+  }
 
   return (
     <>

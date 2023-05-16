@@ -7,7 +7,7 @@ import {bkndurl} from "../helper"
 
 const About = () => {
   // const bkndurl = 'http://localhost:8000'
- 
+  const [loading, setLoading] = useState(true);
   const [userData, setUserData] = useState({});
   const token =  localStorage.getItem('token');
 
@@ -30,6 +30,7 @@ const About = () => {
       })
       const data = await res.json()
       setUserData(data)
+      setLoading(false)
 
       // console.log("response" +data);
       if (localStorage.getItem('token')) {
@@ -52,14 +53,15 @@ const About = () => {
   }
 
 
-  useEffect(() => {
+  useEffect( () => {
     callAboutPage();
   }, [])
 
+  
+  if (loading) {
+    return <p className='text-center '>Loading...</p>; // Display a loading state while the data is being fetched
+  }
   return (
-
-
-
     <>
       <div className='container-lg container-xl container-md container my-3  rounded-5 text-center Regular shadow  ' style={{ fontWeight: 'bold', backgroundColor: "#83C9D1", maxHeight: "60%", fontFamily: 'Roboto Slab serif' }}  >
         <form method="GET">
